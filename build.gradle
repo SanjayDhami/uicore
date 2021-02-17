@@ -1,0 +1,52 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+
+ext {
+    // Sdk and tools
+    rootMinSdkVersion = 21
+    rootTargetSdkVersion = 29
+    rootCompileSdkVersion = 29
+
+
+    // https://mvnrepository.com/artifact/junit/junit
+    rootJunit = '4.13'
+
+    // https://mvnrepository.com/artifact/androidx.test.espresso/espresso-core
+    rootEspressoCore = '3.2.0'
+    
+    // UI Test
+    rootHamcrestVersion = '1.3'
+    rootContribVersion = '3.1.0'
+    rootEspressoVersion = '3.2.0'
+    rootRulesVersion = '1.2.0'
+    rootCoreVersion = '1.1.0'
+    rootUiautomatorVersion = '2.2.0'
+    rooExtJunitVersion = '1.1.1'
+    rootLog4j = '1.2.17'
+
+}
+buildscript {
+    ext.kotlin_version = "1.4.21"
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.1.2"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

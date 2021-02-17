@@ -1,0 +1,3 @@
+include ':uiAutomationCore'
+include ':app'
+rootProject.name = "uicore"
